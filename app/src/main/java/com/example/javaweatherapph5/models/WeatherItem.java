@@ -12,76 +12,77 @@ Root root = om.readValue(myJsonString, Root.class); */
 @Data
 public class WeatherItem{
 
-    public String cod;
-    public int message;
-    public int cnt;
-    public ArrayList<List> list;
-    public City city;
-
+    private String cod;
+    private int message;
+    private int cnt;
+    private ArrayList<List> list;
+    private City city;
+    @Data
     public class City{
-        public int id;
-        public String name;
-        public Coord coord;
-        public String country;
-        public int population;
-        public int timezone;
-        public int sunrise;
-        public int sunset;
+        private int id;
+        private String name;
+        private Coord coord;
+        private String country;
+        private int population;
+        private int timezone;
+        private int sunrise;
+        private int sunset;
     }
-
+    @Data
     public class Clouds{
-        public int all;
+        private int all;
     }
-
+    @Data
     public class Coord{
-        public double lat;
-        public double lon;
+        private double lat;
+        private double lon;
     }
-
+    @Data
     public class List{
-        public int dt;
-        public Main main;
-        public ArrayList<Weather> weather;
-        public Clouds clouds;
-        public Wind wind;
-        public int visibility;
-        public double pop;
-        public Rain rain;
-        public Sys sys;
-        public String dt_txt;
+        private int dt;
+        private Main main;
+        private ArrayList<Weather> weather;
+        private Clouds clouds;
+        private Wind wind;
+        private int visibility;
+        private double pop;
+        private Rain rain;
+        private Sys sys;
+        private String dt_txt;
     }
-
+    @Data
     public class Main{
-        public double temp;
-        public double feels_like;
-        public double temp_min;
-        public double temp_max;
-        public int pressure;
-        public int sea_level;
-        public int grnd_level;
-        public int humidity;
-        public double temp_kf;
+        private double temp;
+        private double feels_like;
+        private double temp_min;
+        private double temp_max;
+        private int pressure;
+        private int sea_level;
+        private int grnd_level;
+        private int humidity;
+        private double temp_kf;
     }
-
+    @Data
     public class Rain{
         @JsonProperty("3h")
-        public double _3h;
+        private double _3h;
     }
+    @Data
     public class Sys{
-        public String pod;
+        private String pod;
     }
-
+    @Data
     public class Weather{
-        public int id;
-        public String main;
-        public String description;
-        public String icon;
+        private int id;
+        private String main;
+        private String description;
+        private String icon;
     }
-
+    @Data
     public class Wind{
-        public double speed;
-        public int deg;
-        public double gust;
+        private double speed;
+        private int deg;
+        private double gust;
     }
 }
 

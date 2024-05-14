@@ -107,6 +107,8 @@ public class MainActivity extends AppCompatActivity {
         tv_CloudsDay5 = findViewById(R.id.tv_CloudsDay5);
         tv_RainProbDay5 = findViewById(R.id.tv_RainProbDay5);
 
-        tv_currentDay1stView.setText(weather.list.get(0).weather.get(0).description);
+        String s = weather.g
+
+        //tv_currentDay1stView.setText(weather.list.get(0).weather.get(0).description);
     }
 }
