@@ -3,6 +3,7 @@ package com.example.javaweatherapph5;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,13 @@ import com.google.android.gms.tasks.OnSuccessListener;
 public class MainActivity extends AppCompatActivity {
 
     WeatherItem weather;
+    TextView tv_currentDay1stView, tv_currentDay2stView, tv_currentDay3stView, tv_currentDay4stView, tv_currentDay5stView;
+    TextView tv_tempDay2, tv_tempMinDay2, tv_tempMaxDay2, tv_CloudsDay2, tv_RainProbDay2;
+
+    TextView tv_tempDay3, tv_tempMinDay3, tv_tempMaxDay3, tv_CloudsDay3, tv_RainProbDay3;
+    TextView tv_tempDay4, tv_tempMinDay4, tv_tempMaxDay4, tv_CloudsDay4, tv_RainProbDay4;
+    TextView tv_tempDay5, tv_tempMinDay5, tv_tempMaxDay5, tv_CloudsDay5, tv_RainProbDay5;
+
     private FusedLocationProviderClient fusedLocationClient;
 
     @Override
@@ -69,6 +77,35 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
+        tv_currentDay1stView = findViewById(R.id.tv_currentDay1stView);
+        tv_currentDay2stView = findViewById(R.id.tv_currentDay2stView);
+        tv_currentDay3stView = findViewById(R.id.tv_currentDay3stView);
+        tv_currentDay4stView = findViewById(R.id.tv_currentDay4stView);
+        tv_currentDay5stView = findViewById(R.id.tv_currentDay5stView);
+
+        tv_tempDay2 = findViewById(R.id.tv_tempDay2);
+        tv_tempMinDay2 = findViewById(R.id.tv_tempMinDay2);
+        tv_tempMaxDay2 = findViewById(R.id.tv_tempMaxDay2);
+        tv_CloudsDay2 = findViewById(R.id.tv_CloudsDay2);
+        tv_RainProbDay2 = findViewById(R.id.tv_RainProbDay2);
+
+        tv_tempDay3 = findViewById(R.id.tv_tempDay3);
+        tv_tempMinDay3 = findViewById(R.id.tv_tempMinDay3);
+        tv_tempMaxDay3 = findViewById(R.id.tv_tempMaxDay3);
+        tv_CloudsDay3 = findViewById(R.id.tv_CloudsDay3);
+        tv_RainProbDay3 = findViewById(R.id.tv_RainProbDay3);
+
+        tv_tempDay4 = findViewById(R.id.tv_tempDay4);
+        tv_tempMinDay4 = findViewById(R.id.tv_tempMinDay4);
+        tv_tempMaxDay4 = findViewById(R.id.tv_tempMaxDay4);
+        tv_CloudsDay4 = findViewById(R.id.tv_CloudsDay4);
+        tv_RainProbDay4 = findViewById(R.id.tv_RainProbDay4);
+
+        tv_tempDay5 = findViewById(R.id.tv_tempDay5);
+        tv_tempMinDay5 = findViewById(R.id.tv_tempMinDay5);
+        tv_tempMaxDay5 = findViewById(R.id.tv_tempMaxDay5);
+        tv_CloudsDay5 = findViewById(R.id.tv_CloudsDay5);
+        tv_RainProbDay5 = findViewById(R.id.tv_RainProbDay5);
 
     }
 }
