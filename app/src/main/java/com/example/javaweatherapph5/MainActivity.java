@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                             double lat = location.getLatitude();
                             double lon = location.getLongitude();
 //                            String ApiEnvKey = System.getenv("API_EnvKey_JavaWeatherAppH5");
-                            String ApiEnvKey = "";
+                            String  ApiEnvKey = "";
                             weather = ApiLayer.getWeatherByLatLon(lat, lon, ApiEnvKey);
                         }
                     }
