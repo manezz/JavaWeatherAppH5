@@ -41,4 +41,6 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     // https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    // https://mvnrepository.com/artifact/com.google.android.gms/play-services-location
+    implementation("com.google.android.gms:play-services-location:21.2.0")
 }

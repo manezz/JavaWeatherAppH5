@@ -11,7 +11,7 @@ import java.util.concurrent.FutureTask;
 import retrofit2.Call;
 
 public class ApiLayer {
-    public static Weather getWeatherByLatLon(String lat, String lon, String API_key) {
+    public static Weather getWeatherByLatLon(double lat, double lon, String API_key) {
         FutureTask<Weather> futureTask = new FutureTask<>(new Callable<Weather>() {
             @Override
             public Weather call() {

@@ -1,5 +1,6 @@
 package com.example.javaweatherapph5;
 
+import android.location.Location;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -8,7 +9,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnSuccessListener;
+
+import com.example.javaweatherapph5.models.Weather;
+
 public class MainActivity extends AppCompatActivity {
+
+    Weather weather;
+    private FusedLocationProviderClient fusedLocationClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +30,23 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+
+        fusedLocationClient.getLastLocation()
+                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                    @Override
+                    public void onSuccess(Location location) {
+                        // Got last known location. In some rare situations this can be null.
+                        if (location != null) {
+                            // Logic to handle location object
+                            double lat = location.getLatitude();
+                            double lon = location.getLongitude();
+                            String ApiEnvKey = System.getenv("API_EnvKey_JavaWeatherAppH5");
+                            weather = ApiLayer.getWeatherByLatLon(lat, lon, ApiEnvKey);
+                        }
+                    }
+                });
+
     }
 }
