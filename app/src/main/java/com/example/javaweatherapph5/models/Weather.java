@@ -1,11 +1,12 @@
 package com.example.javaweatherapph5.models;
 import java.util.ArrayList;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 // import com.fasterxml.jackson.databind.ObjectMapper; // version 2.11.1
 // import com.fasterxml.jackson.annotation.JsonProperty; // version 2.11.1
 /* ObjectMapper om = new ObjectMapper();
 Root root = om.readValue(myJsonString, Root.class); */
-public class City{
+class City{
     public int id;
     public String name;
     public Coord coord;
@@ -16,16 +17,16 @@ public class City{
     public int sunset;
 }
 
-public class Clouds{
+class Clouds{
     public int all;
 }
 
-public class Coord{
+class Coord{
     public double lat;
     public double lon;
 }
 
-public class List{
+class List{
     public int dt;
     public Main main;
     public ArrayList<Weather> weather;
@@ -38,7 +39,7 @@ public class List{
     public String dt_txt;
 }
 
-public class Main{
+class Main{
     public double temp;
     public double feels_like;
     public double temp_min;
@@ -50,12 +51,12 @@ public class Main{
     public double temp_kf;
 }
 
-public class Rain{
+class Rain{
     @JsonProperty("3h")
     public double _3h;
 }
 
-public class Root{
+class Root{
     public String cod;
     public int message;
     public int cnt;
@@ -63,7 +64,7 @@ public class Root{
     public City city;
 }
 
-public class Sys{
+class Sys{
     public String pod;
 }
 
@@ -74,7 +75,7 @@ public class Weather{
     public String icon;
 }
 
-public class Wind{
+class Wind{
     public double speed;
     public int deg;
     public double gust;

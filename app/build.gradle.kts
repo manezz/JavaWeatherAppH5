@@ -43,4 +43,7 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     // https://mvnrepository.com/artifact/com.google.android.gms/play-services-location
     implementation("com.google.android.gms:play-services-location:21.2.0")
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations
+    implementation("com.fasterxml.jackson.core:jackson-annotations:2.17.1")
+
 }
