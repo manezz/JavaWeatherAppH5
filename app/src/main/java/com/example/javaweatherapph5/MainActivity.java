@@ -11,15 +11,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.javaweatherapph5.models.WeatherItem;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 
-import com.example.javaweatherapph5.models.Weather;
-
 public class MainActivity extends AppCompatActivity {
 
-    Weather weather;
+    WeatherItem weather;
     private FusedLocationProviderClient fusedLocationClient;
 
     @Override
@@ -64,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
                             // Logic to handle location object
                             double lat = location.getLatitude();
                             double lon = location.getLongitude();
-//                            String ApiEnvKey = System.getenv("API_EnvKey_JavaWeatherAppH5");
-                            String  ApiEnvKey = "";
+                            //String ApiEnvKey = System.getenv("API_EnvKey_JavaWeatherAppH5");
+                            String ApiEnvKey = "";
                             weather = ApiLayer.getWeatherByLatLon(lat, lon, ApiEnvKey);
                         }
                     }

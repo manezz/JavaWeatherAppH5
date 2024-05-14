@@ -1,6 +1,6 @@
 package com.example.javaweatherapph5;
 
-import com.example.javaweatherapph5.models.Weather;
+import com.example.javaweatherapph5.models.WeatherItem;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -9,7 +9,7 @@ import retrofit2.http.Query;
 
 public interface IWeatherService {
     @GET("forecast")
-    Call<Weather> getWeatherByLatLon(@Query("lat") double lat, @Query("lon") double lon, @Query("appid") String appid);
+    Call<WeatherItem> getWeatherByLatLon(@Query("lat") double lat, @Query("lon") double lon, @Query("appid") String appid);
 }
 
 //public interface IWeatherService {
