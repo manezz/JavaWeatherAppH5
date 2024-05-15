@@ -56,27 +56,13 @@ public class MainActivity extends AppCompatActivity {
                                 // Logic to handle location object
                                 double lat = location.getLatitude();
                                 double lon = location.getLongitude();
-                                String ApiEnvKey = System.getenv("API_EnvKey_JavaWeatherAppH5");
+                                String ApiEnvKey = "";
                                 weather = ApiLayer.getWeatherByLatLon(lat, lon, ApiEnvKey);
                             }
                         }
                     });
         }
-        fusedLocationClient.getLastLocation()
-                .addOnSuccessListener(this, new OnSuccessListener<Location>() {
-                    @Override
-                    public void onSuccess(Location location) {
-                        // Got last known location. In some rare situations this can be null.
-                        if (location != null) {
-                            // Logic to handle location object
-                            double lat = location.getLatitude();
-                            double lon = location.getLongitude();
-                            //String ApiEnvKey = System.getenv("API_EnvKey_JavaWeatherAppH5");
-                            String ApiEnvKey = "";
-                            weather = ApiLayer.getWeatherByLatLon(lat, lon, ApiEnvKey);
-                        }
-                    }
-                });
+
         tv_currentDay1stView = findViewById(R.id.tv_currentDay1stView);
         tv_currentDay2stView = findViewById(R.id.tv_currentDay2stView);
         tv_currentDay3stView = findViewById(R.id.tv_currentDay3stView);
@@ -106,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
         tv_tempMaxDay5 = findViewById(R.id.tv_tempMaxDay5);
         tv_CloudsDay5 = findViewById(R.id.tv_CloudsDay5);
         tv_RainProbDay5 = findViewById(R.id.tv_RainProbDay5);
+
+
 
 
 
